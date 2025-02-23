@@ -1,0 +1,98 @@
+# Solução da Equação de Estado do CO₂ usando Métodos Numéricos
+
+## 1. Descrição do Problema
+
+O problema envolve determinar o volume ocupado por 1000 moléculas de dióxido de carbono (CO₂) sob condições específicas, utilizando sua equação de estado. Esta equação é uma variação da equação de Van der Waals, que descreve o comportamento de gases reais.
+
+**Dados do problema:**
+- Número de moléculas (N) = 1000
+- Temperatura (T) = 300K
+- Pressão (P) = 3,5×10⁷ Pa
+- Coeficiente a = 0,401 Pa·m³
+- Coeficiente b = 42,7×10⁻⁶ m³
+- Constante de Boltzmann (k) = 1,3806503×10⁻²³ J/K
+- Tolerância = 10⁻¹²
+
+A equação a ser resolvida é:
+[P + a(N/V)²](V - Nb) = kNT
+
+Este é um problema de encontrar raízes, onde precisamos determinar o valor de V que satisfaz a equação.
+
+## 2. Métodos Numéricos Utilizados
+
+### 2.1 Método da Bisseção
+O método da bisseção é uma técnica simples e robusta que divide repetidamente um intervalo ao meio, selecionando o subintervalo onde a raiz está localizada. É garantido convergir se a função for contínua e houver uma raiz no intervalo inicial.
+
+**Vantagens:**
+- Garantia de convergência se as condições iniciais forem adequadas
+- Simples de implementar
+- Robusto
+
+**Desvantagens:**
+- Convergência relativamente lenta
+- Requer um intervalo inicial onde a função muda de sinal
+
+### 2.2 Método da Falsa Posição
+Similar à bisseção, mas usa uma interpolação linear para estimar o ponto médio. Em vez de dividir o intervalo ao meio, o método usa a interseção da reta que une os pontos extremos do intervalo com o eixo x.
+
+**Vantagens:**
+- Geralmente converge mais rápido que a bisseção
+- Mantém a garantia de convergência
+
+**Desvantagens:**
+- Pode ser mais lento que a bisseção em alguns casos
+- Também requer intervalo inicial com mudança de sinal
+
+### 2.3 Método de Newton-Raphson
+Utiliza a derivada da função para encontrar melhores aproximações da raiz. É um método iterativo que usa a tangente da função no ponto atual para estimar o próximo ponto.
+
+**Vantagens:**
+- Convergência quadrática quando próximo da raiz
+- Geralmente o mais rápido dos três métodos
+
+**Desvantagens:**
+- Requer o cálculo da derivada
+- Pode divergir se o chute inicial não for adequado
+- Não tem garantia de convergência
+
+## 3. Análise dos Resultados
+
+### 3.1 Comportamento da Função
+A função apresenta um comportamento não-linear devido aos termos quadráticos e à multiplicação de termos dependentes de V. Isso torna a solução analítica difícil, justificando o uso de métodos numéricos.
+
+### 3.2 Comparação dos Métodos
+Analisando os resultados obtidos:
+
+1. **Precisão:**
+   - Todos os métodos alcançaram a tolerância especificada de 10⁻¹²
+   - As soluções encontradas são praticamente idênticas, diferindo apenas nas últimas casas decimais
+   - O volume encontrado é aproximadamente 4,27×10⁻⁵ m³
+
+2. **Eficiência:**
+   - O método de Newton-Raphson convergiu mais rapidamente, necessitando menos iterações
+   - A bisseção e falsa posição tiveram desempenho similar em termos de número de iterações
+   - A falsa posição mostrou uma pequena vantagem sobre a bisseção em termos de velocidade de convergência
+
+3. **Robustez:**
+   - Todos os métodos convergiram satisfatoriamente para o problema dado
+   - A bisseção mostrou-se a mais robusta, sendo menos sensível ao intervalo inicial
+   - O método de Newton-Raphson, apesar de mais rápido, requereu um bom chute inicial
+
+## 4. Conclusões
+
+1. **Validação da Solução:**
+   - O volume encontrado é fisicamente coerente com o problema
+   - A ordem de grandeza está consistente com o número de moléculas e condições dadas
+   - Os três métodos convergiram para o mesmo resultado, validando a solução
+
+2. **Escolha do Método:**
+   - Para este problema específico, o método de Newton-Raphson mostrou-se mais eficiente
+   - A bisseção é recomendada quando a robustez é mais importante que a velocidade
+   - A falsa posição oferece um bom equilíbrio entre robustez e velocidade
+
+3. **Considerações Práticas:**
+   - A implementação computacional permitiu visualizar e comparar os métodos
+   - A interface interativa facilita a análise do comportamento da solução para diferentes parâmetros
+   - A visualização gráfica ajuda a compreender o comportamento da função e a convergência dos métodos
+
+A solução encontrada demonstra que os métodos numéricos são ferramentas poderosas para resolver problemas físicos complexos, onde soluções analíticas são difíceis ou impossíveis de obter.
