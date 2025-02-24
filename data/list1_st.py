@@ -404,16 +404,16 @@ elif page == "Exercício 8":
     1. Reorganização da Equação:
     Primeiro reorganizamos a equacao para a forma f(V) = 0: f(V) = P + a N/V^2 * V - N * b - k * N * T = 0. Essa funcao sera usada para encontrar a raiz V que e o volume procurado.
 
-    2. Metodo da Bisseção
+    2. Metodo da Bisseção:
     O metodo da bissecao requer um intervalo inicial Va e Vb onde f(Va) e f(Vb) possuem sinais opostos. Escolhemos Va = N * b = 1000 * 42.7 * 10^-6 = 4.27 * 10^-2 m^3 como ponto proximo do limite fisico onde V - N * b = 0 e Vb = 1.001 * Va para garantir um intervalo pequeno mas suficiente. Iteramos dividindo o intervalo ao meio ate que a diferenca seja menor que 10^-12.
 
-    3. Metodo da Falsa Posição
+    3. Metodo da Falsa Posição:
     Similar a bissecao usamos o mesmo intervalo inicial. Porem em vez de dividir o intervalo ao meio calculamos um ponto Vm pela formula Vm = Va * f(Vb) - Vb * f(Va) dividido por f(Vb) - f(Va). Atualizamos Va ou Vb com base no sinal de f(Vm) ate atingir a tolerancia.
 
-    4. Metodo de Newton-Raphson
+    4. Metodo de Newton-Raphson:
     Este metodo requer um chute inicial V0 = Va + Vb dividido por 2 e a derivada f'(V): f'(V) = P + a N/V^2 + V - N * b * -2 * a * N^2/V^3. Iteramos com Vnovo = V - f(V) dividido por f'(V) ate que a diferenca entre iteracoes seja menor que 10^-12.
 
-    5. Analise e Comparação
+    5. Analise e Comparação:
     Cada metodo converge para um volume proximo mas com diferencas sutis devido as suas abordagens. A bissecao e robusta mas lenta, a falsa posicao e mais rapida em intervalos bem definidos e Newton-Raphson converge rapidamente com um bom chute inicial. Os resultados sao validados pelo grafico de f(V) e pela proximidade dos valores encontrados.
     """)
 
