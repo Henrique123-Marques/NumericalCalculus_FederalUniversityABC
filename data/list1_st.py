@@ -105,7 +105,7 @@ page = st.sidebar.selectbox("Escolha um exercício", list(pages.keys()))
 
 # Exercício 1 - IEEE 754
 if page == "Exercício 1":
-    st.title("🌟 Explorando o Padrão IEEE 754 - Exercício 1 🌟")
+    st.title("🌟 Explorando o Padrão IEEE 754 - Exercício 1")
     st.markdown("""
     Este aplicativo investiga as propriedades do padrão IEEE 754 para números de ponto flutuante em 64 bits, calculando o maior e menor número representáveis, o epsilon da máquina e analisando a expressão (1 + x - 1) / x para diferentes valores de x. Vamos mergulhar no fascinante mundo da precisão numérica!
     """)
@@ -232,9 +232,9 @@ elif page == "Exercício 2":
             ax.plot(valores_x, valores_y, label="f(x)")
             ax.axhline(y=0, color='k', linestyle='--', alpha=0.5)
             if raiz_b1 is not None:
-                ax.plot(raiz_b1, f(raiz_b1), 'ro', label='Raiz (Código 1)')
+                ax.plot(raiz_b1, f(raiz_b1), 'ro')
             if raiz_b2 is not None:
-                ax.plot(raiz_b2, f(raiz_b2), 'go', label='Raiz (Código 2)')
+                ax.plot(raiz_b2, f(raiz_b2), 'go')
             ax.set_title("Comportamento da função f(x)", fontsize=20)
             ax.set_xlabel("x", fontsize=15)
             ax.set_ylabel("f(x)", fontsize=15)
