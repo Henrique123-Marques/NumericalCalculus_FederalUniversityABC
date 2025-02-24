@@ -167,7 +167,7 @@ elif page == "Exercício 2":
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
-    A função dada é um polinômio de grau 7: \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \). O objetivo é encontrar a raiz no intervalo \( [1 - 2 \times 10^{-8}, 1 + 2 \times 10^{-8}] \) utilizando o método da bisseção em duas implementações diferentes. O método da bisseção divide repetidamente o intervalo ao meio, selecionando o subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância (\( 10^{-10} \)) ou \( f(x) \) seja suficientemente pequeno. Além disso, o comportamento da função é visualizado em um gráfico.
+    A função dada é um polinômio de grau 7: \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \). O objetivo é analisar e discutir o gráfico da função dentro do intervalo \( [1 - 2 \times 10^{-8}, 1 + 2 \times 10^{-8}] \), foi usado também o método da bisseção. O método da bisseção divide repetidamente o intervalo ao meio, selecionando o subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância (\( 10^{-10} \)) ou \( f(x) \) seja suficientemente pequeno. Além disso, o comportamento da função é visualizado em um gráfico.
     """)
 
     # Função f(x)
