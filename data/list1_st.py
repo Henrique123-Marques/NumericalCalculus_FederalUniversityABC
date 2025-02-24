@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-from scipy.optimize import newton, bisect
+import scipy
 
 # Configuração inicial para multipáginas
 st.set_page_config(page_title="Cálculo Numérico - Lista 1", layout="wide")
