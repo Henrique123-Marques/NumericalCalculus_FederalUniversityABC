@@ -242,6 +242,16 @@ elif page == "Exercício 2":
             ax.legend()
             st.pyplot(fig)
 
+            #Discussao do grafico
+            st.write("""A raiz da função f(x) é x = 1, para encontrá-la foi utilizado o Método da Bisseção e a linguagem de 
+            	programação Python. Essa última foi usada para construir o gráfico.
+Ao analisar o gráfico da função, que está sendo avaliada em intervalos pequenos, é possível observar um comportamento oscilatório.
+ Isso é devido ao efeito numérico conhecido como cancelamento catastrófico, que ocorre quando dois números muito próximos 
+ entre si são subtraídos, resultando na perda de dígitos significativos, no aumento dos erros e na redução da precisão do 
+ resultado. Uma questão que está relacionada a perda de informação numérica é a limitação da precisão numérica da máquina. 
+ Para minimizar esse efeito, diminuindo os erros, melhorando a estabilidade dos cálculos e a precisão do resultado, algumas
+  alternativas podem ser utilizadas, como a reescrita algébrica e as representações alternativas, reformulandp as expressões""")
+
 # Exercício 3 - Sucessão
 elif page == "Exercício 3":
     st.title("🌟 Análise da Sucessão Recursiva - Exercício 3")
