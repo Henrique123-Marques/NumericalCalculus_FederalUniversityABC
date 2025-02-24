@@ -399,21 +399,21 @@ elif page == "Exercício 8":
 
     st.markdown("### 📘 Passo a Passo da Resolucão do Exercicio")
     st.write("""
-    Para resolver o Exercicio 8 seguimos a equacao de estado do CO2 dada por P + a N/V^2 vezes V - N vezes b = k vezes N vezes T. Nosso objetivo e encontrar o volume V ocupado por 1000 moleculas de CO2 com os valores fixos fornecidos: a = 0.401 Pa m^3, b = 42.7 vezes 10^-6 m^3, N = 1000, P = 3.5 vezes 10^7 Pa, T = 300 K, k = 1.3806503 vezes 10^-23 J/K e tolerancia de 10^-12. Vamos resolver isso passo a passo com os tres metodos pedidos.
+    Para resolver o Exercicio 8 seguimos a equação de estado do CO2 dada por P + a N/V^2 * V - N * b = k * N * T. Nosso objetivo e encontrar o volume V ocupado por 1000 moleculas de CO2 com os valores fixos fornecidos: a = 0.401 Pa m^3, b = 42.7 * 10^-6 m^3, N = 1000, P = 3.5 * 10^7 Pa, T = 300 K, k = 1.3806503 * 10^-23 J/K e tolerancia de 10^-12. Vamos resolver isso passo a passo com os tres metodos pedidos.
 
-    1. Reorganizacao da Equacao
-    Primeiro reorganizamos a equacao para a forma f(V) = 0: f(V) = P + a N/V^2 vezes V - N vezes b - k vezes N vezes T = 0. Essa funcao sera usada para encontrar a raiz V que e o volume procurado.
+    1. Reorganização da Equação:
+    Primeiro reorganizamos a equacao para a forma f(V) = 0: f(V) = P + a N/V^2 * V - N * b - k * N * T = 0. Essa funcao sera usada para encontrar a raiz V que e o volume procurado.
 
-    2. Metodo da Bissecao
-    O metodo da bissecao requer um intervalo inicial Va e Vb onde f(Va) e f(Vb) possuem sinais opostos. Escolhemos Va = N vezes b = 1000 vezes 42.7 vezes 10^-6 = 4.27 vezes 10^-2 m^3 como ponto proximo do limite fisico onde V - N vezes b = 0 e Vb = 1.001 vezes Va para garantir um intervalo pequeno mas suficiente. Iteramos dividindo o intervalo ao meio ate que a diferenca seja menor que 10^-12.
+    2. Metodo da Bisseção
+    O metodo da bissecao requer um intervalo inicial Va e Vb onde f(Va) e f(Vb) possuem sinais opostos. Escolhemos Va = N * b = 1000 * 42.7 * 10^-6 = 4.27 * 10^-2 m^3 como ponto proximo do limite fisico onde V - N * b = 0 e Vb = 1.001 * Va para garantir um intervalo pequeno mas suficiente. Iteramos dividindo o intervalo ao meio ate que a diferenca seja menor que 10^-12.
 
-    3. Metodo da Falsa Posicao
-    Similar a bissecao usamos o mesmo intervalo inicial. Porem em vez de dividir o intervalo ao meio calculamos um ponto Vm pela formula Vm = Va vezes f(Vb) - Vb vezes f(Va) dividido por f(Vb) - f(Va). Atualizamos Va ou Vb com base no sinal de f(Vm) ate atingir a tolerancia.
+    3. Metodo da Falsa Posição
+    Similar a bissecao usamos o mesmo intervalo inicial. Porem em vez de dividir o intervalo ao meio calculamos um ponto Vm pela formula Vm = Va * f(Vb) - Vb * f(Va) dividido por f(Vb) - f(Va). Atualizamos Va ou Vb com base no sinal de f(Vm) ate atingir a tolerancia.
 
     4. Metodo de Newton-Raphson
-    Este metodo requer um chute inicial V0 = Va + Vb dividido por 2 e a derivada f'(V): f'(V) = P + a N/V^2 + V - N vezes b vezes -2 vezes a vezes N^2/V^3. Iteramos com Vnovo = V - f(V) dividido por f'(V) ate que a diferenca entre iteracoes seja menor que 10^-12.
+    Este metodo requer um chute inicial V0 = Va + Vb dividido por 2 e a derivada f'(V): f'(V) = P + a N/V^2 + V - N * b * -2 * a * N^2/V^3. Iteramos com Vnovo = V - f(V) dividido por f'(V) ate que a diferenca entre iteracoes seja menor que 10^-12.
 
-    5. Analise e Comparacao
+    5. Analise e Comparação
     Cada metodo converge para um volume proximo mas com diferencas sutis devido as suas abordagens. A bissecao e robusta mas lenta, a falsa posicao e mais rapida em intervalos bem definidos e Newton-Raphson converge rapidamente com um bom chute inicial. Os resultados sao validados pelo grafico de f(V) e pela proximidade dos valores encontrados.
     """)
 
