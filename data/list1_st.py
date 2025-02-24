@@ -232,7 +232,7 @@ elif page == "Exercício 2":
             ax.plot(valores_x, valores_y, label="f(x)")
             ax.axhline(y=0, color='k', linestyle='--', alpha=0.5)
             if raiz_b1 is not None:
-                ax.plot(raiz_b1, f(raiz_b1), 'ro')
+                ax.plot(raiz_b1, f(raiz_b1), 'ro', label='Raiz')
             if raiz_b2 is not None:
                 ax.plot(raiz_b2, f(raiz_b2), 'go')
             ax.set_title("Comportamento da função f(x)", fontsize=20)
