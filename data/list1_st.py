@@ -95,6 +95,8 @@ page = st.sidebar.selectbox("Escolha um exercício", list(pages.keys()))
 
 #Link dos codigos
 st.sidebar.write("""Site desenvolvido por - Henrique Marques Santos Silva, RA: 11202231350""")
+st.sidebar.title("""Objetivo do site:""")
+st.sidebar.write("""Organizar as questões em páginas diferentes e apresentar uma das soluções da lista.""")
 st.write("""Link dos códigos feitos em grupo: C#, Google Collab etc: https://drive.google.com/drive/folders/1DClCvIA3w7xjVwtnE0LNHbbhwp_aVsjl?usp=drive_link""")
 
 # Exercício 1 - IEEE 754
