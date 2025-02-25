@@ -447,6 +447,12 @@ elif page == "Exercício 7":
     Esta página está reservada para o Exercício 7 resolvido com a linguagem C# e no site: https://1nventors.github.io/Lista1/!
     """)
 
+    st.markdown("### 📚 Referências Citadas")
+    st.write("""
+    - Stewart, J. (2016). *Calculus: Early Transcendentals*. 8ª ed. Cengage Learning.
+    - Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. 9ª ed. Brooks/Cole.
+    """)
+
 # Exercício 8 - CO₂
 elif page == "Exercício 8":
     st.title("✨ Cálculo do Volume Ocupado por Moléculas de CO₂ - Exercício 8")
@@ -651,3 +657,9 @@ elif page == "Exercício 9":
                 st.write(f"f(x_falsa) = {f(x_falsa):.2e}")
             if x_newton is not None:
                 st.write(f"f(x_newton) = {f(x_newton):.2e}")
+
+    st.markdown("### 📚 Referências Citadas")
+    st.write("""
+    - Stewart, J. (2016). *Calculus: Early Transcendentals*. 8ª ed. Cengage Learning.
+    - Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. 9ª ed. Brooks/Cole.
+    """)
