@@ -93,6 +93,9 @@ pages = {
 
 page = st.sidebar.selectbox("Escolha um exercício", list(pages.keys()))
 
+#Link dos codigos
+st.write("""Link dos códigos: C#, Google Collab etc: https://drive.google.com/drive/folders/1DClCvIA3w7xjVwtnE0LNHbbhwp_aVsjl?usp=drive_link""")
+
 # Exercício 1 - IEEE 754
 if page == "Exercício 1":
     st.title("🌟 Explorando o Padrão IEEE 754 - Exercício 1 🌟")
