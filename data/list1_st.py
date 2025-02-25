@@ -101,18 +101,23 @@ st.write("""Link dos códigos: C#, Google Collab etc: https://drive.google.com/d
 if page == "Exercício 1":
     st.title("🌟 Explorando o Padrão IEEE 754 - Exercício 1 🌟")
     st.markdown("""
-    Essa página investiga as propriedades do padrão IEEE 754 para números de ponto flutuante em 64 bits, calculando o maior e menor número representáveis, o epsilon da máquina e analisando a expressão (1 + x - 1) / x para diferentes valores de x. Vamos mergulhar no fascinante mundo da precisão numérica!
+    Essa página investiga as propriedades do padrão IEEE 754 para números de ponto flutuante em 64 bits, calculando o maior
+     e menor número representáveis, o epsilon da máquina e analisando a expressão (1 + x - 1) / x para diferentes valores de x.
+      Vamos mergulhar no fascinante mundo da precisão numérica!
     """)
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
-    O padrão IEEE 754 define como números de ponto flutuante sao representados em computadores. Em 64 bits, usamos 1 bit para o sinal, 11 bits para o expoente e 52 bits para a mantissa. Com isso, podemos determinar:
+    O padrão IEEE 754 define como números de ponto flutuante sao representados em computadores. Em 64 bits, usamos 1 bit para o 
+    sinal, 11 bits para o expoente e 52 bits para a mantissa. Com isso, podemos determinar:
 
     - Maior numero representavel: (2 - epsilon) vezes 2^1023
     - Menor numero normalizado: 1.0 vezes 2^-1022
     - Epsilon da maquina: o menor valor u tal que 1 + u e diferente de 1
 
-    Alem disso, analisamos a expressao (1 + x - 1) / x para x = 10^-15 e x = 10^15, comparando o valor aproximado com o exato (1) e calculando erros absoluto e relativo. Por fim, apresentamos uma solucao alternativa simplificando a expressao para 1.
+    Alem disso, analisamos a expressao (1 + x - 1) / x para x = 10^-15 e x = 10^15, comparando o valor aproximado 
+    com o exato (1) e calculando erros absoluto e relativo. Por fim, apresentamos uma solucao alternativa simplificando 
+    a expressao para 1.
     """)
 
     if st.button("🔍 Executar Cálculos"):
@@ -162,12 +167,17 @@ if page == "Exercício 1":
 elif page == "Exercício 2":
     st.title("✨ Análise da Função Polinomial - Exercício 2")
     st.markdown("""
-    Essa página avalia a função \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \) em um pequeno intervalo ao redor de \( x = 1 \) usando o método da bisseção para encontrar a raiz e exibe seu comportamento graficamente.
+    Essa página avalia a função \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \) em um pequeno intervalo
+     ao redor de \( x = 1 \) usando o método da bisseção para encontrar a raiz e exibe seu comportamento graficamente.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
-    A função dada é um polinômio de grau 7: \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \). O objetivo é encontrar a raiz no intervalo \( [1 - 2 \times 10^{-8}, 1 + 2 \times 10^{-8}] \) utilizando o método da bisseção em duas implementações diferentes. O método da bisseção divide repetidamente o intervalo ao meio, selecionando o subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância (\( 10^{-10} \)) ou \( f(x) \) seja suficientemente pequeno. Além disso, o comportamento da função é visualizado em um gráfico.
+    A função dada é um polinômio de grau 7: \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \). O objetivo
+     é encontrar a raiz no intervalo \( [1 - 2 \times 10^{-8}, 1 + 2 \times 10^{-8}] \) utilizando o método da bisseção
+      em duas implementações diferentes. O método da bisseção divide repetidamente o intervalo ao meio, selecionando o 
+      subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância (\( 10^{-10} \)) 
+      ou \( f(x) \) seja suficientemente pequeno. Além disso, o comportamento da função é visualizado em um gráfico.
     """)
 
     # Função f(x)
@@ -315,9 +325,12 @@ elif page == "Exercício 3":
             # Texto Adicional
             st.markdown("#### 🔬 Análise de Erros na Sucessão")
             st.write("""
-            Os valores de \( I_n \) dependem diretamente dos anteriores. Se um valor for ligeiramente impreciso devido ao arredondamento, os erros se acumulam nas iterações seguintes.  
-            - **Multiplicação por \( (n+1) \) amplifica o erro**: Se \( I_n \) tiver um pequeno erro, quando for multiplicado por \( (n+1) \), o erro cresce.  
-            - **Subtração pode causar erro de cancelamento**: A operação \( 1 - (n+1)I_n \) pode resultar em perda de precisão se \( (n+1)I_n \) for próximo de 1, devido à subtração de números similares.  
+            Os valores de \( I_n \) dependem diretamente dos anteriores. Se um valor for ligeiramente impreciso devido 
+            ao arredondamento, os erros se acumulam nas iterações seguintes.  
+            - **Multiplicação por \( (n+1) \) amplifica o erro**: Se \( I_n \) tiver um pequeno erro, quando for multiplicado
+             por \( (n+1) \), o erro cresce.  
+            - **Subtração pode causar erro de cancelamento**: A operação \( 1 - (n+1)I_n \) pode resultar em perda de precisão
+             se \( (n+1)I_n \) for próximo de 1, devido à subtração de números similares.  
             Podemos então aplicar uma tolerância:
             """)
 
@@ -364,7 +377,9 @@ elif page == "Exercício 4":
     st.markdown("""Essa página resolve duas partes do Exercício 4: estima o valor de π usando o método de Monte Carlo!""")
 
     st.markdown("### 📘 Explicação do Problema")
-    st.write("""Estimativa de pi: Usamos o metodo de Monte Carlo gerando pontos aleatorios em um quadrado de lado 1 e verificando quantos caem dentro de um quarto de circulo. A formula e pi estimado = 4 vezes m dividido por n, onde m e o numero de pontos dentro do circulo e n e o total de pontos. Calculamos o erro para diferentes valores de n.""")
+    st.write("""Estimativa de pi: Usamos o metodo de Monte Carlo gerando pontos aleatorios em um quadrado de lado 1 e
+     verificando quantos caem dentro de um quarto de circulo. A formula e pi estimado = 4 vezes m dividido por n, onde
+      m e o numero de pontos dentro do circulo e n e o total de pontos. Calculamos o erro para diferentes valores de n.""")
 
     if st.button("🔍 Calcular Resultados"):
         with st.spinner("Processando os cálculos..."):
@@ -430,12 +445,17 @@ elif page == "Exercício 5":
 elif page == "Exercício 6":
     st.title("✨ Exercício 6 - Comprimento Máximo da Barra")
     st.markdown("""
-    Essa página calcula o comprimento máximo de uma barra resolvendo uma equação não linear com o método de Newton-Raphson e discute a possibilidade de usar o método da bisseção como alternativa.
+    Essa página calcula o comprimento máximo de uma barra resolvendo uma equação não linear com o método de Newton-Raphson e 
+    discute a possibilidade de usar o método da bisseção como alternativa.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
-    O objetivo é encontrar o comprimento máximo \( L \) de uma barra, onde \( L = \\frac{l_2}{\\sin(\\pi - \\gamma - \\alpha)} + \\frac{l_1}{\\sin(\\alpha)} \), resolvendo a equação \( f(\\alpha) = \\frac{l_2 \\cos(\\pi - \\gamma - \\alpha)}{\\sin^2(\\pi - \\gamma - \\alpha)} - \\frac{l_1 \\cos(\\alpha)}{\\sin^2(\\alpha)} = 0 \). Aqui, \( l_1 = 8 \), \( l_2 = 10 \), e \( \\gamma = \\frac{3\\pi}{5} \). O método de Newton-Raphson é usado com um chute inicial \( \\alpha = 0.5 \) e tolerância de \( 10^{-6} \).
+    O objetivo é encontrar o comprimento máximo \( L \) de uma barra, 
+    onde \( L = \\frac{l_2}{\\sin(\\pi - \\gamma - \\alpha)} + \\frac{l_1}{\\sin(\\alpha)} \), 
+    resolvendo a equação \( f(\\alpha) = \\frac{l_2 \\cos(\\pi - \\gamma - \\alpha)}{\\sin^2(\\pi - \\gamma - \\alpha)} - \\frac{l_1 \\cos(\\alpha)}{\\sin^2(\\alpha)} = 0 \). 
+    Aqui, \( l_1 = 8 \), \( l_2 = 10 \), e \( \\gamma = \\frac{3\\pi}{5} \). O método de Newton-Raphson é usado com um 
+    chute inicial \( \\alpha = 0.5 \) e tolerância de \( 10^{-6} \).
     """)
 
     # Definição das constantes
@@ -470,9 +490,11 @@ elif page == "Exercício 6":
 
                 st.markdown("### 🌟 Alternativa e Comparação")
                 st.write("Outro método que pode ser usado:")
-                st.write("O método da bisseção pode ser usado como alternativa. Ele garante convergência, pois busca um intervalo onde a função muda de sinal, mas é mais lento que Newton-Raphson.")
+                st.write("O método da bisseção pode ser usado como alternativa. Ele garante convergência, pois busca um intervalo
+                 onde a função muda de sinal, mas é mais lento que Newton-Raphson.")
                 st.write("Diferença entre eles:")
-                st.write("- **Newton-Raphson**: Rápido, mas requer um bom chute inicial e pode falhar se a função não for bem comportada.")
+                st.write("- **Newton-Raphson**: Rápido, mas requer um bom chute inicial e pode falhar se a função não for
+                 bem comportada.")
                 st.write("- **Bisseção**: Mais seguro, pois sempre converge se houver uma raiz no intervalo, mas é mais lento.")
             except Exception as e:
                 st.error(f"Erro ao calcular: {str(e)}")
@@ -500,7 +522,9 @@ elif page == "Exercício 7":
 elif page == "Exercício 8":
     st.title("✨ Cálculo do Volume Ocupado por Moléculas de CO₂ - Exercício 8")
     st.markdown("""
-    Essa página resolve a equação de estado do dióxido de carbono (CO₂) para determinar o volume ocupado por 1000 moléculas, utilizando métodos numéricos clássicos: **Bisseção**, **Falsa Posição** e **Newton-Raphson**. Os parâmetros são fixos conforme o enunciado do Exercício 8, e os resultados são apresentados com gráficos e análises detalhadas.
+    Essa página resolve a equação de estado do dióxido de carbono (CO₂) para determinar o volume ocupado por 1000 moléculas,
+     utilizando métodos numéricos clássicos: **Bisseção**, **Falsa Posição** e **Newton-Raphson**. Os parâmetros são fixos 
+     conforme o enunciado do Exercício 8, e os resultados são apresentados com gráficos e análises detalhadas.
     """)
 
     st.sidebar.header("🔧 Parâmetros Fixos do CO₂")
@@ -518,22 +542,35 @@ elif page == "Exercício 8":
 
     st.markdown("### 📘 Passo a Passo da Resolucão do Exercicio")
     st.write("""
-    Para resolver o Exercicio 8 seguimos a equacao de estado do CO2 dada por P + a N/V^2 vezes V - N vezes b = k vezes N vezes T. Nosso objetivo e encontrar o volume V ocupado por 1000 moleculas de CO2 com os valores fixos fornecidos: a = 0.401 Pa m^3, b = 42.7 vezes 10^-6 m^3, N = 1000, P = 3.5 vezes 10^7 Pa, T = 300 K, k = 1.3806503 vezes 10^-23 J/K e tolerancia de 10^-12. Vamos resolver isso passo a passo com os tres metodos pedidos.
+    Para resolver o Exercicio 8 seguimos a equacao de estado do CO2 dada por P + a N/V^2 vezes V - N vezes b = k vezes N vezes T. 
+    Nosso objetivo e encontrar o volume V ocupado por 1000 moleculas de CO2 com os valores fixos fornecidos: 
+    a = 0.401 Pa m^3, b = 42.7 vezes 10^-6 m^3, N = 1000, P = 3.5 vezes 10^7 Pa, T = 300 K, k = 1.3806503 vezes 10^-23 J/K 
+    e tolerancia de 10^-12. Vamos resolver isso passo a passo com os tres metodos pedidos.
 
     1. Reorganizacao da Equacao
-    Primeiro reorganizamos a equacao para a forma f(V) = 0: f(V) = P + a N/V^2 vezes V - N vezes b - k vezes N vezes T = 0. Essa funcao sera usada para encontrar a raiz V que e o volume procurado.
+    Primeiro reorganizamos a equacao para a forma f(V) = 0: f(V) = P + a N/V^2 vezes V - N vezes b - k vezes N vezes T = 0. 
+    Essa funcao sera usada para encontrar a raiz V que e o volume procurado.
 
     2. Metodo da Bissecao
-    O metodo da bissecao requer um intervalo inicial Va e Vb onde f(Va) e f(Vb) possuem sinais opostos. Escolhemos Va = N vezes b = 1000 vezes 42.7 vezes 10^-6 = 4.27 vezes 10^-2 m^3 como ponto proximo do limite fisico onde V - N vezes b = 0 e Vb = 1.001 vezes Va para garantir um intervalo pequeno mas suficiente. Iteramos dividindo o intervalo ao meio ate que a diferenca seja menor que 10^-12.
+    O metodo da bissecao requer um intervalo inicial Va e Vb onde f(Va) e f(Vb) possuem sinais opostos. 
+    Escolhemos Va = N vezes b = 1000 vezes 42.7 vezes 10^-6 = 4.27 vezes 10^-2 m^3 como ponto proximo do limite fisico
+     onde V - N vezes b = 0 e Vb = 1.001 vezes Va para garantir um intervalo pequeno mas suficiente. Iteramos dividindo o
+      intervalo ao meio ate que a diferenca seja menor que 10^-12.
 
     3. Metodo da Falsa Posicao
-    Similar a bissecao usamos o mesmo intervalo inicial. Porem em vez de dividir o intervalo ao meio calculamos um ponto Vm pela formula Vm = Va vezes f(Vb) - Vb vezes f(Va) dividido por f(Vb) - f(Va). Atualizamos Va ou Vb com base no sinal de f(Vm) ate atingir a tolerancia.
+    Similar a bissecao usamos o mesmo intervalo inicial. Porem em vez de dividir o intervalo ao meio calculamos um ponto Vm 
+    pela formula Vm = Va vezes f(Vb) - Vb vezes f(Va) dividido por f(Vb) - f(Va). Atualizamos Va ou Vb com base no sinal de f(Vm) 
+    até atingir a tolerancia.
 
     4. Metodo de Newton-Raphson
-    Este metodo requer um chute inicial V0 = Va + Vb dividido por 2 e a derivada f'(V): f'(V) = P + a N/V^2 + V - N vezes b vezes -2 vezes a vezes N^2/V^3. Iteramos com Vnovo = V - f(V) dividido por f'(V) ate que a diferenca entre iteracoes seja menor que 10^-12.
+    Este metodo requer um chute inicial V0 = Va + Vb dividido por 2 e a derivada 
+    f'(V): f'(V) = P + a N/V^2 + V - N vezes b vezes -2 vezes a vezes N^2/V^3. 
+    Iteramos com Vnovo = V - f(V) dividido por f'(V) ate que a diferenca entre iteracoes seja menor que 10^-12.
 
     5. Analise e Comparacao
-    Cada metodo converge para um volume proximo mas com diferencas sutis devido as suas abordagens. A bissecao e robusta mas lenta, a falsa posicao e mais rapida em intervalos bem definidos e Newton-Raphson converge rapidamente com um bom chute inicial. Os resultados sao validados pelo grafico de f(V) e pela proximidade dos valores encontrados.
+    Cada metodo converge para um volume proximo mas com diferencas sutis devido as suas abordagens. A bissecao e robusta mas
+     lenta, a falsa posicao e mais rapida em intervalos bem definidos e Newton-Raphson converge rapidamente com um bom chute 
+     inicial. Os resultados sao validados pelo grafico de f(V) e pela proximidade dos valores encontrados.
     """)
 
     if st.button('🔍 Calcular Resultados'):
@@ -591,18 +628,20 @@ elif page == "Exercício 8":
 elif page == "Exercício 9":
     st.title("✨ Resolução de Equação Não Linear - Exercício 9")
     st.markdown("""
-    Essa página resolve a equação \( f(x) = -\frac{1}{x^3} - \frac{1}{x^2} + 2 = 0 \) utilizando os métodos numéricos **Bisseção**, **Falsa Posição** e **Newton-Raphson**, com intervalo inicial \([-2.0, -0.5]\) e um critério de parada baseado no epsilon da máquina.
+    Essa página resolve a equação f(x) = -1/x^3 + (-1/x^2) = E utilizando os métodos numéricos **Bisseção**, **Falsa Posição** e
+     **Newton-Raphson**, com intervalo inicial [-2.0, -0.5] e um critério de parada baseado no epsilon da máquina.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
-    A função \( f(x) = -\frac{1}{x^3} - \frac{1}{x^2} + 2 \) deve ser resolvida para encontrar uma raiz no intervalo \([-2.0, -0.5]\). Os métodos numéricos utilizados são:
+    A função f(x) = -1/x^3 + (-1/x^2) = E deve ser resolvida para encontrar uma raiz no intervalo -2.0, -0.5]. Os métodos numéricos
+     utilizados são:
 
     - **Bisseção**: Divide o intervalo ao meio iterativamente até que o erro relativo seja menor que o epsilon da máquina.
     - **Falsa Posição**: Usa uma interpolação linear para estimar a raiz, ajustando o intervalo com base nos sinais.
-    - **Newton-Raphson**: Utiliza a derivada \( f'(x) = \frac{3}{x^4} + \frac{2}{x^3} \) e um chute inicial \( x_0 = -0.75 \) para convergir rapidamente à raiz.
+    - **Newton-Raphson**: Utiliza a derivada f'(x) = 3/x^4 + 2/x^3 e um chute inicial x_0 = -0.75 para convergir rapidamente à raiz.
 
-    O critério de parada é baseado no erro relativo: \( |x_{novo} - x_{velho}| \leq \epsilon \cdot \max(1, |x_{novo}|) \), onde \(\epsilon\) é o epsilon da máquina.
+    O critério de parada é baseado no erro relativo: |x_novo - x_velho| <= eps.max(1, |x_novo|), onde eps é o epsilon da máquina.
     """)
 
     # Funções do Exercício 9
