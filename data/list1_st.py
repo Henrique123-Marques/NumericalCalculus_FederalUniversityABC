@@ -651,5 +651,3 @@ elif page == "Exercício 9":
                 st.write(f"f(x_falsa) = {f(x_falsa):.2e}")
             if x_newton is not None:
                 st.write(f"f(x_newton) = {f(x_newton):.2e}")
-
-	st.write("""Developed by Henrique Marques Santos Silva, 2025""")
