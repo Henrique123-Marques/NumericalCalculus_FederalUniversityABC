@@ -92,9 +92,9 @@ pages = {
 }
 
 page = st.sidebar.selectbox("Escolha um exercício", list(pages.keys()))
-	st.write("""Site desenvolvido por - Henrique Marques Santos Silva, RA: 11202231350""")
-#Link dos codigos
 
+#Link dos codigos
+st.write("""Site desenvolvido por - Henrique Marques Santos Silva, RA: 11202231350""")
 st.write("""Link dos códigos: C#, Google Collab etc: https://drive.google.com/drive/folders/1DClCvIA3w7xjVwtnE0LNHbbhwp_aVsjl?usp=drive_link""")
 
 # Exercício 1 - IEEE 754
