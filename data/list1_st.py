@@ -94,6 +94,7 @@ pages = {
 page = st.sidebar.selectbox("Escolha um exercício", list(pages.keys()))
 
 #Link dos codigos
+st.write("""Site desenvolvido por - Henrique Marques Santos Silva, RA: 11202231350""")
 st.write("""Link dos códigos: C#, Google Collab etc: https://drive.google.com/drive/folders/1DClCvIA3w7xjVwtnE0LNHbbhwp_aVsjl?usp=drive_link""")
 
 # Exercício 1 - IEEE 754
@@ -234,15 +235,28 @@ elif page == "Exercício 2":
             ax.grid(True)
             ax.legend()
             st.pyplot(fig)
-            st.write("""A raiz da função f(x) é x = 1, para encontrá-la foi utilizado o Método da Bisseção e a linguagem de 
-             	programação Python. Essa última foi usada para construir o gráfico.
-Ao analisar o gráfico da função, que está sendo avaliada em intervalos pequenos, é possível observar um comportamento 
-oscilatório. Isso é devido ao efeito numérico conhecido como cancelamento catastrófico, que ocorre quando dois números
- muito próximos entre si são subtraídos, resultando na perda de dígitos significativos, no aumento dos erros e na redução 
- da precisão do resultado. Uma questão que está relacionada a perda de informação numérica é a limitação da precisão numérica
-  da máquina. Para minimizar esse efeito, diminuindo os erros, melhorando a estabilidade dos cálculos e a precisão do resultado,
-   algumas alternativas podem ser utilizadas, como a reescrita algébrica e as representações alternativas, reformulando
-   as expressões""")
+            st.title("Explicação do resultado: ")
+            st.write("""A questão envolve o método da bisseção aplicado à função f(x) = x^7-7x^6+21x^5-35x^4+35x^3-21^x^2+7x-1 
+            	no intervalo minúsculo, ou seja, de 0.99999998 a 1.00000002, centrado em x=1. O método da bisseção busca 
+            	uma raiz dividindo o intervalo ao meio repetidamente, escolhendo o subintervalo onde 
+f(x) muda de sinal, até que o tamanho do intervalo ou o valor da função no ponto médio seja menor que a tolerância 10^-10
+, com até 100 iterações. Para funcionar, f(a) e f(b) devem ter sinais opostos, o que acontece aqui: 
+f(0.99999998) é negativo e f(1.00000002) é positivo, pois f(1)=0 (basta substituir x=1 no polinômio para ver que todos os
+termos se cancelam). Isso indica que x=1 é a raiz exata, e o método está refinando essa solução.
+
+Dois códigos foram fornecidos. O primeiro para quando o intervalo é menor que 10^-10 ou ∣f(m)∣< 10^-10 
+, retornando o ponto médio m, enquanto o segundo usa apenas o tamanho do intervalo como critério, retornando 
+(a+b)/2 após as iterações. Ambos convergem para um valor muito próximo de 1, como 1.0000000025, dependendo de arredondamentos, 
+já que a raiz verdadeira é x=1. A função é, na verdade, (x-1)^7
+ , um polinômio cuja raiz x=1 tem multiplicidade 7, o que faz f(x) mudar de sinal suavemente ao redor desse ponto. 
+No gráfico, com 401 pontos equidistantes no intervalo, vemos f(x) cruzando o eixo x em x=1, indo de negativa a positiva, mas, devido
+ ao intervalo pequeno, a curva parece quase reta próxima de zero.
+Os resultados são consistentes: os códigos aproximam 
+x=1 com alta precisão, limitada pela tolerância e pelo intervalo inicial. A ligeira diferença entre eles, se existir, 
+vem das condições de parada — o primeiro é mais flexível, o segundo mais rígido. 
+O gráfico confirma o comportamento esperado, mostrando a mudança de sinal e a raiz exata em 
+x=1. Em resumo, o método da bisseção funciona como esperado, e os resultados refletem a natureza da função e
+ do intervalo escolhido.""")
 
 # Exercício 3 - Análise da Sucessão Recursiva (Nova Solução)
 elif page == "Exercício 3":
