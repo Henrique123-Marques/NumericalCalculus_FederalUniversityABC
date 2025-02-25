@@ -337,9 +337,9 @@ elif page == "Exercício 4":
 
 # Exercício 5 - Vazio
 elif page == "Exercício 5":
-    st.title("✨ Exercício 5")
+    st.title("✨ Exercício 5 - Aproximação de π pela série.")
     st.markdown("""
-    Esta página está reservada para o Exercício 5. No momento, não há conteúdo disponível!
+    Esta página está reservada para o Exercício 5. Solução feita em linguagem C# no site: https://1nventors.github.io/Lista1/!
     """)
 
 # Exercício 6 - Comprimento Máximo da Barra
@@ -382,9 +382,9 @@ elif page == "Exercício 6":
 
 # Exercício 7 - Vazio
 elif page == "Exercício 7":
-    st.title("✨ Exercício 7")
+    st.title("✨ Exercício 7 - Análise de convergência das iterações de ponto fixo")
     st.markdown("""
-    Esta página está reservada para o Exercício 7. No momento, não há conteúdo disponível!
+    Esta página está reservada para o Exercício 5. Solução feita em linguagem C# no site: https://1nventors.github.io/Lista1/
     """)
 
 # Exercício 8 - CO₂
