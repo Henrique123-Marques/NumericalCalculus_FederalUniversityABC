@@ -250,7 +250,7 @@ Ao analisar o gráfico da função, que está sendo avaliada em intervalos p
  entre si são subtraídos, resultando na perda de dígitos significativos, no aumento dos erros e na redução da precisão do 
  resultado. Uma questão que está relacionada a perda de informação numérica é a limitação da precisão numérica da máquina. 
  Para minimizar esse efeito, diminuindo os erros, melhorando a estabilidade dos cálculos e a precisão do resultado, algumas
-  alternativas podem ser utilizadas, como a reescrita algébrica e as representações alternativas, reformulandp as expressões""")
+  alternativas podem ser utilizadas, como a reescrita algébrica e as representações alternativas, reformulando as expressões""")
 
 # Exercício 3 - Sucessão
 elif page == "Exercício 3":
