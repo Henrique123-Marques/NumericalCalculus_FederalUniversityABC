@@ -167,17 +167,17 @@ if page == "Exercício 1":
 elif page == "Exercício 2":
     st.title("✨ Análise da Função Polinomial - Exercício 2")
     st.markdown("""
-    Essa página avalia a função \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \) em um pequeno intervalo
-     ao redor de \( x = 1 \) usando o método da bisseção para encontrar a raiz e exibe seu comportamento graficamente.
+    Essa página avalia a função f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 em um pequeno intervalo
+     ao redor de x = 1 usando o método da bisseção para encontrar a raiz e exibe seu comportamento graficamente.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
-    A função dada é um polinômio de grau 7: \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \). O objetivo
-     é encontrar a raiz no intervalo \( [1 - 2 \times 10^{-8}, 1 + 2 \times 10^{-8}] \) utilizando o método da bisseção
+    A função dada é um polinômio de grau 7: f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1. O objetivo
+     é encontrar a raiz no intervalo [1 - 2*10^-8, 1 + 2*10^-8] utilizando o método da bisseção
       em duas implementações diferentes. O método da bisseção divide repetidamente o intervalo ao meio, selecionando o 
-      subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância (\( 10^{-10} \)) 
-      ou \( f(x) \) seja suficientemente pequeno. Além disso, o comportamento da função é visualizado em um gráfico.
+      subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância 10^-10
+      ou f(x) seja suficientemente pequeno. Além disso, o comportamento da função é visualizado em um gráfico.
     """)
 
     # Função f(x)
@@ -284,15 +284,16 @@ x=1. Em resumo, o método da bisseção funciona como esperado, e os resultados 
 elif page == "Exercício 3":
     st.title("🌟 Análise da Sucessão Recursiva - Exercício 3")
     st.markdown("""
-    Essa página calcula e analisa a sucessão definida por \( I_0 = \\frac{1}{e} (e - 1) \) e \( I_{n+1} = 1 - (n + 1) I_n \), explorando sua evolução sem e com tolerância para convergência.
+    Essa página calcula e analisa a sucessão definida por 
+    I0 = 1/e*(e-1), I(n+1) = 1 - (n + 1) * In para n=0,1,2,..., explorando sua evolução sem e com tolerância para convergência.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
-    A sucessão é definida recursivamente com valor inicial \( I_0 = \\frac{1}{e} (e - 1) \) e a relação \( I_{n+1} = 1 - (n + 1) I_n \). Vamos analisar:
+    A sucessão é definida recursivamente com valor inicial I0 = 1/e*(e-1) e a relação (I_(n+1) = 1 - (n + 1) I_n). Vamos analisar:
 
-    1. **Evolução sem tolerância**: Calculamos a sequência até atingir um limite de iterações (1 milhão) ou overflow numérico (valores > \( 10^{30} \)).
-    2. **Evolução com tolerância**: Introduzimos uma tolerância de \( 5 \\times 10^{-2} \) e um máximo de 20 iterações, verificando convergência.
+    1. **Evolução sem tolerância**: Calculamos a sequência até atingir um limite de iterações (1 milhão) ou overflow numérico (valores > 10^30).
+    2. **Evolução com tolerância**: Introduzimos uma tolerância de 5 * 10^-2 e um máximo de 20 iterações, verificando convergência.
     """)
 
     if st.button("🔍 Calcular Sucessão"):
