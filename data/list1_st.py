@@ -490,11 +490,11 @@ elif page == "Exercício 6":
 
                 st.markdown("### 🌟 Alternativa e Comparação")
                 st.write("Outro método que pode ser usado:")
-                st.write("O método da bisseção pode ser usado como alternativa. Ele garante convergência, pois busca um intervalo
-                 onde a função muda de sinal, mas é mais lento que Newton-Raphson.")
+                st.write("""O método da bisseção pode ser usado como alternativa. Ele garante convergência, pois busca um intervalo
+                 onde a função muda de sinal, mas é mais lento que Newton-Raphson.""")
                 st.write("Diferença entre eles:")
-                st.write("- **Newton-Raphson**: Rápido, mas requer um bom chute inicial e pode falhar se a função não for
-                 bem comportada.")
+                st.write("""- **Newton-Raphson**: Rápido, mas requer um bom chute inicial e pode falhar se a função não for
+                 bem comportada.""")
                 st.write("- **Bisseção**: Mais seguro, pois sempre converge se houver uma raiz no intervalo, mas é mais lento.")
             except Exception as e:
                 st.error(f"Erro ao calcular: {str(e)}")
