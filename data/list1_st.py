@@ -101,7 +101,7 @@ st.write("""Link dos códigos: C#, Google Collab etc: https://drive.google.com/d
 if page == "Exercício 1":
     st.title("🌟 Explorando o Padrão IEEE 754 - Exercício 1 🌟")
     st.markdown("""
-    Este aplicativo investiga as propriedades do padrão IEEE 754 para números de ponto flutuante em 64 bits, calculando o maior e menor número representáveis, o epsilon da máquina e analisando a expressão (1 + x - 1) / x para diferentes valores de x. Vamos mergulhar no fascinante mundo da precisão numérica!
+    Essa página investiga as propriedades do padrão IEEE 754 para números de ponto flutuante em 64 bits, calculando o maior e menor número representáveis, o epsilon da máquina e analisando a expressão (1 + x - 1) / x para diferentes valores de x. Vamos mergulhar no fascinante mundo da precisão numérica!
     """)
 
     st.markdown("### 📘 Explicação do Problema")
@@ -152,11 +152,17 @@ if page == "Exercício 1":
                 st.write(f"Erro absoluto: {erro_absoluto:e}")
                 st.write(f"Erro relativo: {erro_relativo:e}")
 
+    st.markdown("### 📚 Referências Citadas")
+    st.write("""
+    - Stewart, J. (2016). *Calculus: Early Transcendentals*. 8ª ed. Cengage Learning.
+    - Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. 9ª ed. Brooks/Cole.
+    """)
+
 # Exercício 2 - Raiz da função f(x) com bisseção e gráfico
 elif page == "Exercício 2":
     st.title("✨ Análise da Função Polinomial - Exercício 2")
     st.markdown("""
-    Este aplicativo avalia a função \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \) em um pequeno intervalo ao redor de \( x = 1 \) usando o método da bisseção para encontrar a raiz e exibe seu comportamento graficamente.
+    Essa página avalia a função \( f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1 \) em um pequeno intervalo ao redor de \( x = 1 \) usando o método da bisseção para encontrar a raiz e exibe seu comportamento graficamente.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
@@ -258,11 +264,17 @@ O gráfico confirma o comportamento esperado, mostrando a mudança de sinal e a 
 x=1. Em resumo, o método da bisseção funciona como esperado, e os resultados refletem a natureza da função e
  do intervalo escolhido.""")
 
+    st.markdown("### 📚 Referências Citadas")
+    st.write("""
+    - Stewart, J. (2016). *Calculus: Early Transcendentals*. 8ª ed. Cengage Learning.
+    - Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. 9ª ed. Brooks/Cole.
+    """)
+
 # Exercício 3 - Análise da Sucessão Recursiva (Nova Solução)
 elif page == "Exercício 3":
     st.title("🌟 Análise da Sucessão Recursiva - Exercício 3")
     st.markdown("""
-    Este aplicativo calcula e analisa a sucessão definida por \( I_0 = \\frac{1}{e} (e - 1) \) e \( I_{n+1} = 1 - (n + 1) I_n \), explorando sua evolução sem e com tolerância para convergência.
+    Essa página calcula e analisa a sucessão definida por \( I_0 = \\frac{1}{e} (e - 1) \) e \( I_{n+1} = 1 - (n + 1) I_n \), explorando sua evolução sem e com tolerância para convergência.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
@@ -349,7 +361,7 @@ elif page == "Exercício 3":
 # Exercício 4 - Estimativa de Pi
 elif page == "Exercício 4":
     st.title("✨ Estimativa de π - Exercício 4")
-    st.markdown("""Este aplicativo resolve duas partes do Exercício 4: estima o valor de π usando o método de Monte Carlo!""")
+    st.markdown("""Essa página resolve duas partes do Exercício 4: estima o valor de π usando o método de Monte Carlo!""")
 
     st.markdown("### 📘 Explicação do Problema")
     st.write("""Estimativa de pi: Usamos o metodo de Monte Carlo gerando pontos aleatorios em um quadrado de lado 1 e verificando quantos caem dentro de um quarto de circulo. A formula e pi estimado = 4 vezes m dividido por n, onde m e o numero de pontos dentro do circulo e n e o total de pontos. Calculamos o erro para diferentes valores de n.""")
@@ -396,18 +408,29 @@ elif page == "Exercício 4":
             ax.grid(True, which='both', linestyle='--', linewidth=0.5)
             st.pyplot(fig)
 
+    st.markdown("### 📚 Referências Citadas")
+    st.write("""
+    - Stewart, J. (2016). *Calculus: Early Transcendentals*. 8ª ed. Cengage Learning.
+    - Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. 9ª ed. Brooks/Cole.
+    """)
+
 # Exercício 5 - Vazio
 elif page == "Exercício 5":
     st.title("✨ Exercício 5 - Aproximação de π pela série.")
     st.markdown("""
-    Esta página está reservada para o Exercício 5 resolvido com a linguagem C# e no site: https://1nventors.github.io/Lista1/!
+    Essa página está reservada para o Exercício 5!""")
+
+    st.markdown("### 📚 Referências Citadas")
+    st.write("""
+    - Stewart, J. (2016). *Calculus: Early Transcendentals*. 8ª ed. Cengage Learning.
+    - Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. 9ª ed. Brooks/Cole.
     """)
 
 # Exercício 6 - Comprimento Máximo da Barra
 elif page == "Exercício 6":
     st.title("✨ Exercício 6 - Comprimento Máximo da Barra")
     st.markdown("""
-    Este aplicativo calcula o comprimento máximo de uma barra resolvendo uma equação não linear com o método de Newton-Raphson e discute a possibilidade de usar o método da bisseção como alternativa.
+    Essa página calcula o comprimento máximo de uma barra resolvendo uma equação não linear com o método de Newton-Raphson e discute a possibilidade de usar o método da bisseção como alternativa.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
@@ -454,11 +477,17 @@ elif page == "Exercício 6":
             except Exception as e:
                 st.error(f"Erro ao calcular: {str(e)}")
 
+    st.markdown("### 📚 Referências Citadas")
+    st.write("""
+    - Stewart, J. (2016). *Calculus: Early Transcendentals*. 8ª ed. Cengage Learning.
+    - Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. 9ª ed. Brooks/Cole.
+    """)
+
 # Exercício 7 - Vazio
 elif page == "Exercício 7":
     st.title("✨ Exercício 7 -  Análise de convergência das iterações de ponto fixo")
     st.markdown("""
-    Esta página está reservada para o Exercício 7 resolvido com a linguagem C# e no site: https://1nventors.github.io/Lista1/!
+    Essa página está reservada para o Exercício 7
     """)
 
     st.markdown("### 📚 Referências Citadas")
@@ -471,7 +500,7 @@ elif page == "Exercício 7":
 elif page == "Exercício 8":
     st.title("✨ Cálculo do Volume Ocupado por Moléculas de CO₂ - Exercício 8")
     st.markdown("""
-    Este aplicativo resolve a equação de estado do dióxido de carbono (CO₂) para determinar o volume ocupado por 1000 moléculas, utilizando métodos numéricos clássicos: **Bisseção**, **Falsa Posição** e **Newton-Raphson**. Os parâmetros são fixos conforme o enunciado do Exercício 8, e os resultados são apresentados com gráficos e análises detalhadas.
+    Essa página resolve a equação de estado do dióxido de carbono (CO₂) para determinar o volume ocupado por 1000 moléculas, utilizando métodos numéricos clássicos: **Bisseção**, **Falsa Posição** e **Newton-Raphson**. Os parâmetros são fixos conforme o enunciado do Exercício 8, e os resultados são apresentados com gráficos e análises detalhadas.
     """)
 
     st.sidebar.header("🔧 Parâmetros Fixos do CO₂")
@@ -562,7 +591,7 @@ elif page == "Exercício 8":
 elif page == "Exercício 9":
     st.title("✨ Resolução de Equação Não Linear - Exercício 9")
     st.markdown("""
-    Este aplicativo resolve a equação \( f(x) = -\frac{1}{x^3} - \frac{1}{x^2} + 2 = 0 \) utilizando os métodos numéricos **Bisseção**, **Falsa Posição** e **Newton-Raphson**, com intervalo inicial \([-2.0, -0.5]\) e um critério de parada baseado no epsilon da máquina.
+    Essa página resolve a equação \( f(x) = -\frac{1}{x^3} - \frac{1}{x^2} + 2 = 0 \) utilizando os métodos numéricos **Bisseção**, **Falsa Posição** e **Newton-Raphson**, com intervalo inicial \([-2.0, -0.5]\) e um critério de parada baseado no epsilon da máquina.
     """)
 
     st.markdown("### 📘 Explicação do Problema")
