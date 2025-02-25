@@ -231,7 +231,7 @@ elif page == "Exercício 2":
             ax.grid(True)
             ax.legend()
             st.pyplot(fig)
-             st.write("""A raiz da função f(x) é x = 1, para encontrá-la foi utilizado o Método da Bisseção e a linguagem de 
+            st.write("""A raiz da função f(x) é x = 1, para encontrá-la foi utilizado o Método da Bisseção e a linguagem de 
              	programação Python. Essa última foi usada para construir o gráfico.
 Ao analisar o gráfico da função, que está sendo avaliada em intervalos pequenos, é possível observar um comportamento 
 oscilatório. Isso é devido ao efeito numérico conhecido como cancelamento catastrófico, que ocorre quando dois números
