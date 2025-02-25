@@ -99,7 +99,7 @@ st.write("""Link dos códigos: C#, Google Collab etc: https://drive.google.com/d
 
 # Exercício 1 - IEEE 754
 if page == "Exercício 1":
-    st.title("🌟 Explorando o Padrão IEEE 754 - Exercício 1 🌟")
+    st.title("🌟 Explorando o Padrão IEEE 754 - Exercício 1")
     st.markdown("""
     Essa página investiga as propriedades do padrão IEEE 754 para números de ponto flutuante em 64 bits, calculando o maior
      e menor número representáveis, o epsilon da máquina e analisando a expressão (1 + x - 1) / x para diferentes valores de x.
