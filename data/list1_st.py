@@ -453,10 +453,10 @@ elif page == "Exercício 6":
     st.markdown("### 📘 Explicação do Problema")
     st.write("""
     O objetivo é encontrar o comprimento máximo \( L \) de uma barra, 
-    onde \( L = \\frac{l_2}{\\sin(\\pi - \\gamma - \\alpha)} + \\frac{l_1}{\\sin(\\alpha)} \), 
-    resolvendo a equação \( f(\\alpha) = \\frac{l_2 \\cos(\\pi - \\gamma - \\alpha)}{\\sin^2(\\pi - \\gamma - \\alpha)} - \\frac{l_1 \\cos(\\alpha)}{\\sin^2(\\alpha)} = 0 \). 
-    Aqui, \( l_1 = 8 \), \( l_2 = 10 \), e \( \\gamma = \\frac{3\\pi}{5} \). O método de Newton-Raphson é usado com um 
-    chute inicial \( \\alpha = 0.5 \) e tolerância de \( 10^{-6} \).
+    onde L = l2/sin(pi - gama - alpha) + l1/sin(alpha), 
+    resolvendo a equação f(alpha) = l2/cos(pi - gamma - alpha)/sin^2(pi - gamma - alpha) - l_1/cos(alpha)/sin^2(alpha) = 0. 
+    Aqui, l_1 = 8, l_2 = 10, e gamma = (3*pi)/5. O método de Newton-Raphson é usado com um 
+    chute inicial alpha = 0.5 e tolerância de 10^-6.
     """)
 
     # Definição das constantes
