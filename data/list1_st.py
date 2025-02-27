@@ -257,12 +257,12 @@ elif page == "Exercício 2":
             st.write("""A questão envolve o método da bisseção aplicado à função f(x) = x^7-7x^6+21x^5-35x^4+35x^3-21^x^2+7x-1 
             	no intervalo minúsculo, ou seja, de 0.99999998 a 1.00000002, centrado em x=1. O método da bisseção busca 
             	uma raiz dividindo o intervalo ao meio repetidamente, escolhendo o subintervalo onde 
-f(x) muda de sinal, até que o tamanho do intervalo ou o valor da função no ponto médio seja menor que a tolerância 10^-10
+f(x) muda de sinal, até que o tamanho do intervalo ou o valor da função no ponto médio seja menor que a tolerância 10^-12
 , com até 100 iterações. Para funcionar, f(a) e f(b) devem ter sinais opostos, o que acontece aqui: 
 f(0.99999998) é negativo e f(1.00000002) é positivo, pois f(1)=0 (basta substituir x=1 no polinômio para ver que todos os
 termos se cancelam). Isso indica que x=1 é a raiz exata, e o método está refinando essa solução.
 
-Dois códigos foram fornecidos. O primeiro para quando o intervalo é menor que 10^-10 ou ∣f(m)∣< 10^-10 
+Dois códigos foram fornecidos. O primeiro para quando o intervalo é menor que 10^-12 ou ∣f(m)∣< 10^-12 
 , retornando o ponto médio m, enquanto o segundo usa apenas o tamanho do intervalo como critério, retornando 
 (a+b)/2 após as iterações. Ambos convergem para um valor muito próximo de 1, como 1.0000000025, dependendo de arredondamentos, 
 já que a raiz verdadeira é x=1. A função é, na verdade, (x-1)^7
