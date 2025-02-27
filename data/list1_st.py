@@ -178,7 +178,7 @@ elif page == "Exercício 2":
     A função dada é um polinômio de grau 7: f(x) = x^7 - 7x^6 + 21x^5 - 35x^4 + 35x^3 - 21x^2 + 7x - 1. O objetivo
      é encontrar a raiz no intervalo [1 - 2*10^-8, 1 + 2*10^-8] utilizando o método da bisseção
       em duas implementações diferentes. O método da bisseção divide repetidamente o intervalo ao meio, selecionando o 
-      subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância 10^-10
+      subintervalo onde ocorre uma mudança de sinal, até que o tamanho do intervalo seja menor que a tolerância 10^-12
       ou f(x) seja suficientemente pequeno. Além disso, o comportamento da função é visualizado em um gráfico.
     """)
 
@@ -187,7 +187,7 @@ elif page == "Exercício 2":
         return x**7 - 7*x**6 + 21*x**5 - 35*x**4 + 35*x**3 - 21*x**2 + 7*x - 1
 
     # Método da Bisseção - Código 1
-    def bissecao_1(f, a, b, tol=1e-10, max_iter=100):
+    def bissecao_1(f, a, b, tol=1e-12, max_iter=100):
         if f(a) * f(b) >= 0:
             st.error("ERRO! f(a) e f(b) precisam ter sinais opostos. O intervalo não contém uma raiz.")
             return None
